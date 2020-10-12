@@ -4,5 +4,3 @@ build
 #NPM
 node_modules
 
-#webpack
-webpack.config.js
