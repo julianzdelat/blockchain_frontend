@@ -14,7 +14,11 @@ module.exports = {
   },
 
   devtool: process.env.NODE_ENV === 'production' ? undefined : 'inline-source-map',
-
+  
+  devServer: {
+    port: 9000
+  },
+  
   resolve: {
     extensions: ['.js', '.jsx'],
   },
