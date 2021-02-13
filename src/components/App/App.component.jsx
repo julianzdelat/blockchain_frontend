@@ -6,6 +6,7 @@ import AuthProvider from '../../providers/Auth';
 import HomePage from '../../pages/Home';
 import Layout from '../Layout';
 import NotFound from '../../pages/NotFound';
+import Private from '../Private';
 
 const App = () => {
   return (
@@ -16,12 +17,9 @@ const App = () => {
             <Route exact path="/">
               <HomePage />
             </Route>
-            <Route exact path="/admin">
+            <Private exact path="/admin">
               <AdminPage />
-            </Route>
-            <Route exact path="/admin">
-              <AdminPage />
-            </Route>
+            </Private>
             <Route path="*">
               <NotFound />
             </Route>
