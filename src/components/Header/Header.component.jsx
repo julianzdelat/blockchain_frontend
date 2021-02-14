@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Icon, Menu, Dropdown } from 'semantic-ui-react';
 
 import { useAuth } from '../../providers/Auth';
+import { HOME_ROUTE, USER_ICON } from '../../utils/constants';
 import Login from '../Login';
 
 const Header = ({ openSidebar }) => {
@@ -21,7 +22,7 @@ const Header = ({ openSidebar }) => {
 
   const deAuthenticate = () => {
     logout();
-    history.push('/');
+    history.push(HOME_ROUTE);
     setOpen(true);
   };
 
@@ -36,7 +37,7 @@ const Header = ({ openSidebar }) => {
         </Menu.Item>
 
         <Menu.Menu position="right">
-          <Dropdown icon="user circle big" className="link icon item">
+          <Dropdown icon={USER_ICON} className="link icon item">
             <Dropdown.Menu>
               {admin || employee ? (
                 <Dropdown.Item onClick={deAuthenticate}>logout</Dropdown.Item>
