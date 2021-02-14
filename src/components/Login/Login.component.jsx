@@ -7,22 +7,15 @@ import './Login.styles.css';
 const Login = ({ open, setOpen }) => {
   const { login } = useAuth();
 
-  function authenticate(event) {
-    event.preventDefault();
+  const authenticate = (e) => {
+    e.preventDefault();
     login();
     setOpen(false);
-  }
+  };
 
   return (
     <div className="login">
-      <Modal
-        closeIcon
-        dimmer="blurring"
-        size="mini"
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        open={open}
-      >
+      <Modal dimmer="blurring" size="mini" onOpen={() => setOpen(true)} open={open}>
         <Modal.Header>Login</Modal.Header>
         <Modal.Content>
           <form onSubmit={authenticate} className="login-form">

@@ -1,5 +1,5 @@
 import './Header.styles.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Icon, Menu, Dropdown } from 'semantic-ui-react';
 
@@ -9,11 +9,20 @@ import Login from '../Login';
 const Header = ({ openSidebar }) => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
-  const { authenticated, logout } = useAuth();
+  const { admin, employee, logout } = useAuth();
+
+  useEffect(() => {
+    if (admin || employee) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
+  }, [admin, employee]);
 
   const deAuthenticate = () => {
     logout();
     history.push('/');
+    setOpen(true);
   };
 
   return (
@@ -29,10 +38,10 @@ const Header = ({ openSidebar }) => {
         <Menu.Menu position="right">
           <Dropdown icon="user circle big" className="link icon item">
             <Dropdown.Menu>
-              {!authenticated ? (
-                <Dropdown.Item onClick={() => setOpen(true)}>login</Dropdown.Item>
-              ) : (
+              {admin || employee ? (
                 <Dropdown.Item onClick={deAuthenticate}>logout</Dropdown.Item>
+              ) : (
+                <Dropdown.Item onClick={() => setOpen(true)}>login</Dropdown.Item>
               )}
             </Dropdown.Menu>
           </Dropdown>

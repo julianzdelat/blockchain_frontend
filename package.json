@@ -1,7 +1,19 @@
 {
-  "name": "app",
+  "name": "blockchain_frontend",
   "version": "0.1.0",
-  "private": true,
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "eslint ./src --ext .js,.jsx",
+    "lint:fix": "eslint ./src --ext .js,.jsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianzdelat/blockchain_frontend.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -13,14 +25,6 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
     "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src --ext .js,.jsx",
-    "lint:fix": "eslint ./src --ext .js,.jsx --fix"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^18.2.0",

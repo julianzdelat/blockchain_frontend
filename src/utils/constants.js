@@ -1,3 +1,4 @@
-const AUTH_STORAGE_KEY = 'wa_cert_authenticated';
+const ADMIN_STORAGE_KEY = 'admin';
+const EMPLOYEE_STORAGE_KEY = 'employee';
 
-export { AUTH_STORAGE_KEY };
+export { ADMIN_STORAGE_KEY, EMPLOYEE_STORAGE_KEY };

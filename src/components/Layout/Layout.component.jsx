@@ -9,16 +9,13 @@ import Footer from '../Footer';
 
 const Layout = ({ children }) => {
   const [visible, setVisible] = useState(false);
-  const { authenticated } = useAuth();
+  const { admin, employee } = useAuth();
   const history = useHistory();
 
-  const goHome = () => {
-    history.push('/');
-    setVisible(false);
-  };
+  console.log(admin, employee);
 
-  const goAdmin = () => {
-    history.push('/admin');
+  const goPage = (route) => {
+    history.push(`/${route}`);
     setVisible(false);
   };
 
@@ -34,15 +31,31 @@ const Layout = ({ children }) => {
           visible={visible}
           width="thin"
         >
-          <Menu.Item onClick={goHome} as="a">
-            <Icon name="shopping cart" />
-            Home
-          </Menu.Item>
-          {authenticated ? (
-            <Menu.Item as="a" onClick={goAdmin}>
-              <Icon name="lock" />
-              Admin
+          {employee ? (
+            <Menu.Item onClick={() => goPage('')} as="a">
+              <Icon name="shopping cart" />
+              Home
             </Menu.Item>
+          ) : null}
+          {admin ? (
+            <>
+              <Menu.Item onClick={() => goPage('')} as="a">
+                <Icon name="shopping cart" />
+                Home
+              </Menu.Item>
+              <Menu.Item as="a" onClick={() => goPage('admin')}>
+                <Icon name="lock" />
+                Admin
+              </Menu.Item>
+              <Menu.Item onClick={() => goPage('items')} as="a">
+                <Icon name="table" />
+                Items
+              </Menu.Item>
+              <Menu.Item onClick={() => goPage('payments')} as="a">
+                <Icon name="payment" />
+                Payments
+              </Menu.Item>
+            </>
           ) : null}
         </Sidebar>
         <Sidebar.Pusher dimmed={visible}>

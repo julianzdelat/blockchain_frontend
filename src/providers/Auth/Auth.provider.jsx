@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 
-import { AUTH_STORAGE_KEY } from '../../utils/constants';
+import { ADMIN_STORAGE_KEY, EMPLOYEE_STORAGE_KEY } from '../../utils/constants';
 import { storage } from '../../utils/storage';
 
 const AuthContext = React.createContext(null);
@@ -14,27 +14,40 @@ function useAuth() {
 }
 
 function AuthProvider({ children }) {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [admin, setAdmin] = useState(false);
+  const [employee, setEmployee] = useState(false);
 
   useEffect(() => {
-    const lastAuthState = storage.get(AUTH_STORAGE_KEY);
-    const isAuthenticated = Boolean(lastAuthState);
+    const lastAdminState = storage.get(ADMIN_STORAGE_KEY);
+    const lastEmployeeState = storage.get(EMPLOYEE_STORAGE_KEY);
+    const isAdmin = Boolean(lastAdminState);
+    const isEmployee = Boolean(lastEmployeeState);
 
-    setAuthenticated(isAuthenticated);
+    setAdmin(isAdmin);
+    setEmployee(isEmployee);
   }, []);
 
   const login = useCallback(() => {
-    setAuthenticated(true);
-    storage.set(AUTH_STORAGE_KEY, true);
+    if (1 + Math.floor(2 * Math.random()) === 1) {
+      setAdmin(true);
+      setEmployee(false);
+      storage.set(ADMIN_STORAGE_KEY, true);
+    } else {
+      setAdmin(false);
+      setEmployee(true);
+      storage.set(EMPLOYEE_STORAGE_KEY, true);
+    }
   }, []);
 
   const logout = useCallback(() => {
-    setAuthenticated(false);
-    storage.set(AUTH_STORAGE_KEY, false);
+    setAdmin(false);
+    setEmployee(false);
+    storage.set(ADMIN_STORAGE_KEY, false);
+    storage.set(EMPLOYEE_STORAGE_KEY, false);
   }, []);
 
   return (
-    <AuthContext.Provider value={{ login, logout, authenticated }}>
+    <AuthContext.Provider value={{ login, logout, admin, employee }}>
       {children}
     </AuthContext.Provider>
   );
