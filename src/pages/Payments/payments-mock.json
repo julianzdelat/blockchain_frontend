@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "Id": "1",
+      "Name": "Payment1",
+      "Description": "Payment1 description",
+      "Status": "active"
+    },
+    {
+      "Id": "2",
+      "Name": "Payment2",
+      "Description": "Payment2 description",
+      "Status": "active"
+    },
+    {
+      "Id": "3",
+      "Name": "Payment3",
+      "Description": "Payment3 description",
+      "Status": "active"
+    },
+    {
+      "Id": "4",
+      "Name": "Payment4",
+      "Description": "Payment4 description",
+      "Status": "active"
+    }
+  ]
+}
