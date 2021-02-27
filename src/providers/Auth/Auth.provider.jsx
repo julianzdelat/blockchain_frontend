@@ -27,8 +27,8 @@ function AuthProvider({ children }) {
     setEmployee(isEmployee);
   }, []);
 
-  const login = useCallback(() => {
-    if (1 + Math.floor(2 * Math.random()) === 1) {
+  const login = useCallback((username) => {
+    if (username === 'admin') {
       setAdmin(true);
       setEmployee(false);
       storage.set(ADMIN_STORAGE_KEY, true);
