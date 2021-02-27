@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "Id": "1",
+      "Name": "Item1",
+      "Description": "Item1 description",
+      "UnitPrice": 10,
+      "Quantity": 0,
+      "Inventory": 100,
+      "IsAgeNeeded": false,
+      "Barcode": 1010101,
+      "Status": "active"
+    },
+    {
+      "Id": "2",
+      "Name": "Item2",
+      "Description": "Item2 description",
+      "UnitPrice": 20,
+      "Quantity": 0,
+      "Inventory": 200,
+      "IsAgeNeeded": true,
+      "Barcode": 2020202,
+      "Status": "active"
+    },
+    {
+      "Id": "3",
+      "Name": "Item3",
+      "Description": "Item3 description",
+      "UnitPrice": 30,
+      "Quantity": 0,
+      "Inventory": 300,
+      "IsAgeNeeded": false,
+      "Barcode": 3030303,
+      "Status": "active"
+    },
+    {
+      "Id": "4",
+      "Name": "Item4",
+      "Description": "Item4 description",
+      "UnitPrice": 40,
+      "Quantity": 0,
+      "Inventory": 400,
+      "IsAgeNeeded": true,
+      "Barcode": 4040404,
+      "Status": "active"
+    },
+    {
+      "Id": "5",
+      "Name": "Item5",
+      "Description": "Item5 description",
+      "UnitPrice": 50,
+      "Quantity": 0,
+      "Inventory": 500,
+      "IsAgeNeeded": false,
+      "Barcode": 5050505,
+      "Status": "active"
+    },
+    {
+      "Id": "6",
+      "Name": "Item6",
+      "Description": "Item6 description",
+      "UnitPrice": 60,
+      "Quantity": 0,
+      "Inventory": 600,
+      "IsAgeNeeded": true,
+      "Barcode": 6060606,
+      "Status": "active"
+    },
+    {
+      "Id": "7",
+      "Name": "Item7",
+      "Description": "Item7 description",
+      "UnitPrice": 70,
+      "Quantity": 0,
+      "Inventory": 700,
+      "IsAgeNeeded": false,
+      "Barcode": 7070707,
+      "Status": "active"
+    },
+    {
+      "Id": "8",
+      "Name": "Item8",
+      "Description": "Item8 description",
+      "UnitPrice": 80,
+      "Quantity": 0,
+      "Inventory": 800,
+      "IsAgeNeeded": true,
+      "Barcode": 8080808,
+      "Status": "active"
+    }
+  ]
+}
