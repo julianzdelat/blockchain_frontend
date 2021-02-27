@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 
 import { useAuth } from '../../providers/Auth';
@@ -6,10 +6,12 @@ import './Login.styles.css';
 
 const Login = ({ open, setOpen }) => {
   const { login } = useAuth();
+  const [data, setData] = useState({ username: '', password: '' });
 
   const authenticate = (e) => {
     e.preventDefault();
-    login();
+    login(data.username);
+    setData({ username: '', password: '' });
     setOpen(false);
   };
 
@@ -21,13 +23,25 @@ const Login = ({ open, setOpen }) => {
           <div className="form-group">
             <label htmlFor="username">
               <strong>username </strong>
-              <input required type="text" id="username" />
+              <input
+                required
+                type="text"
+                id="username"
+                value={data.username}
+                onChange={(e) => setData({ ...data, username: e.target.value })}
+              />
             </label>
           </div>
           <div className="form-group">
             <label htmlFor="password">
               <strong>password </strong>
-              <input required type="password" id="password" />
+              <input
+                required
+                type="password"
+                id="password"
+                value={data.password}
+                onChange={(e) => setData({ ...data, password: e.target.value })}
+              />
             </label>
           </div>
           <Button color="green" type="submit">
