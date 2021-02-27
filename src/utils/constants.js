@@ -11,3 +11,6 @@ export const HOME_ROUTE = '/';
 export const ADMIN_ROUTE = '/admin';
 export const ITEMS_ROUTE = '/items';
 export const PAYMENTS_ROUTE = '/payments';
+
+export const ITEM_HEADERS = ['Barcode', 'Name', 'Price', 'Inventory', 'IsAgeNeeded'];
+export const PAYMENT_HEADERS = ['Name', 'Description'];

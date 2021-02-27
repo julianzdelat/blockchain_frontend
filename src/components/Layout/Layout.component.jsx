@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Sidebar.Pushable>
+      <Sidebar.Pushable className="back-color">
         <Sidebar
           as={Menu}
           animation="overlay"

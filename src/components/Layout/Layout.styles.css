@@ -5,5 +5,9 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-  background: whitesmoke;
+  background-color: #e6e6e6;
+}
+
+.back-color {
+  background-color: #e6e6e6;
 }

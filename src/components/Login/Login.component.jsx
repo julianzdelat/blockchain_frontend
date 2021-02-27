@@ -14,30 +14,28 @@ const Login = ({ open, setOpen }) => {
   };
 
   return (
-    <div className="login">
-      <Modal dimmer="blurring" size="mini" onOpen={() => setOpen(true)} open={open}>
-        <Modal.Header>Login</Modal.Header>
-        <Modal.Content>
-          <form onSubmit={authenticate} className="login-form">
-            <div className="form-group">
-              <label htmlFor="username">
-                <strong>username </strong>
-                <input required type="text" id="username" />
-              </label>
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">
-                <strong>password </strong>
-                <input required type="password" id="password" />
-              </label>
-            </div>
-            <Button color="green" type="submit">
-              Login
-            </Button>
-          </form>
-        </Modal.Content>
-      </Modal>
-    </div>
+    <Modal dimmer="blurring" size="mini" onOpen={() => setOpen(true)} open={open}>
+      <Modal.Header>Login</Modal.Header>
+      <Modal.Content>
+        <form onSubmit={authenticate} className="login-form">
+          <div className="form-group">
+            <label htmlFor="username">
+              <strong>username </strong>
+              <input required type="text" id="username" />
+            </label>
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">
+              <strong>password </strong>
+              <input required type="password" id="password" />
+            </label>
+          </div>
+          <Button color="green" type="submit">
+            Login
+          </Button>
+        </form>
+      </Modal.Content>
+    </Modal>
   );
 };
 
