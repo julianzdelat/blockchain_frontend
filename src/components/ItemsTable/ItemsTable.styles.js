@@ -8,7 +8,8 @@ export const TableContainer = styled.table`
 
 export const Row = styled.tr`
   background-color: whitesmoke;
-  \ &:hover {
+  cursor: pointer;
+  &:hover {
     background-color: #ddd;
   }
 `;
