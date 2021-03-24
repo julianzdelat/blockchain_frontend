@@ -12,7 +12,7 @@ const UsersModal = ({ user, setOpen, open }) => {
 
   return (
     <Modal closeIcon onClose={() => setOpen(false)} open={open}>
-      <Modal.Header>Edit {user.Name}</Modal.Header>
+      <Modal.Header>Edit {`${user.Name} ${user.LastName}`}</Modal.Header>
       <Modal.Content>
         <Form>
           <Row>
