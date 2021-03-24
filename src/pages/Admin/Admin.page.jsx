@@ -14,9 +14,9 @@ const AdminPage = () => {
 
   return (
     <Container>
-      <Title>Users</Title>
+      <Title>Clients</Title>
       <Button type="button" onClick={() => setOpenModal(true)}>
-        <Icon name="add" size="small" /> New User
+        <Icon name="add" size="small" /> New Client
       </Button>
       <UsersTable users={users} headers={USER_HEADERS} />
       <CreateUserModal open={openModal} setOpen={setOpenModal} />

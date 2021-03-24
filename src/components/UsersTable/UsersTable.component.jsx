@@ -17,9 +17,10 @@ const UsersTable = ({ headers, users }) => {
     };
     return (
       <Row key={user.Barcode} onClick={() => openModalHandler(user)}>
-        <TableContent>{user.Name}</TableContent>
-        <TableContent>{user.LastName}</TableContent>
-        <TableContent>{user.Email}</TableContent>
+        <TableContent>{`${user.Name} ${user.LastName}`}</TableContent>
+        <TableContent>{user.City}</TableContent>
+        <TableContent>{user.MobilePhone}</TableContent>
+        <TableContent>{user.Birthdate}</TableContent>
       </Row>
     );
   });

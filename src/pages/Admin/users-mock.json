@@ -2,27 +2,87 @@
   "users": [
     {
       "Id": "1",
+      "ClietNumber": "0001",
       "Name": "Andres",
       "LastName": "Chavez",
-      "Email": "andreschabba@gmail.com",
-      "Password": "koby123",
-      "Status": "active"
+      "Address": "Caguama 2970",
+      "City": "Guadalajara",
+      "State": "Jalisco",
+      "Zipcode": "12345",
+      "HomePhone": "3336325100",
+      "MobilePhone": "3322535002",
+      "Birthdate": "18/09/1998",
+      "Sex": "M"
     },
     {
       "Id": "2",
-      "Name": "Christian",
-      "LastName": "Muñoz",
-      "Email": "chriznm@gmail.com",
-      "Password": "pokemon123",
-      "Status": "active"
+      "ClietNumber": "0002",
+      "Name": "Juan",
+      "LastName": "Perez",
+      "Address": "Calle 2 3101",
+      "City": "Zapopan",
+      "State": "Jalisco",
+      "Zipcode": "12345",
+      "HomePhone": "3332455467",
+      "MobilePhone": "3312121212",
+      "Birthdate": "10/01/2000",
+      "Sex": "M"
     },
     {
       "Id": "3",
-      "Name": "Julian",
-      "LastName": "Zepeda",
-      "Email": "julianzdelat@gmail.com",
-      "Password": "redbull123",
-      "Status": "active"
+      "ClietNumber": "0003",
+      "Name": "Maria",
+      "LastName": "Muñoz",
+      "Address": "Calle 3 2169",
+      "City": "Tlajomulco",
+      "State": "Jalisco",
+      "Zipcode": "12345",
+      "HomePhone": "3332455467",
+      "MobilePhone": "3312121212",
+      "Birthdate": "10/01/1996",
+      "Sex": "F"
+    },
+    {
+      "Id": "4",
+      "ClietNumber": "0004",
+      "Name": "Maria",
+      "LastName": "Muñoz",
+      "Address": "Calle 3 2169",
+      "City": "Tlajomulco",
+      "State": "Jalisco",
+      "Zipcode": "12345",
+      "HomePhone": "3332455467",
+      "MobilePhone": "3312121212",
+      "Birthdate": "10/01/1996",
+      "Sex": "F"
+    },
+    {
+      "Id": "5",
+      "ClietNumber": "0005",
+      "Name": "Maria",
+      "LastName": "Muñoz",
+      "Address": "Calle 3 2169",
+      "City": "Tlajomulco",
+      "State": "Jalisco",
+      "Zipcode": "12345",
+      "HomePhone": "3332455467",
+      "MobilePhone": "3312121212",
+      "Birthdate": "10/01/1996",
+      "Sex": "F"
+    },
+    {
+      "Id": "6",
+      "ClietNumber": "0006",
+      "Name": "Maria",
+      "LastName": "Muñoz",
+      "Address": "Calle 3 2169",
+      "City": "Tlajomulco",
+      "State": "Jalisco",
+      "Zipcode": "12345",
+      "HomePhone": "3332455467",
+      "MobilePhone": "3312121212",
+      "Birthdate": "10/01/1996",
+      "Sex": "F"
     }
   ]
 }

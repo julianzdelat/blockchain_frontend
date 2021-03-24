@@ -7,12 +7,20 @@ import './Login.styles.css';
 const Login = ({ open, setOpen }) => {
   const { login } = useAuth();
   const [data, setData] = useState({ username: '', password: '' });
+  const [error, setError] = useState(false);
 
   const authenticate = (e) => {
     e.preventDefault();
-    login(data.username);
-    setData({ username: '', password: '' });
-    setOpen(false);
+    const response = login(data.username, data.password);
+    if (response) {
+      setData({ username: '', password: '' });
+      setOpen(false);
+    } else {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 3000);
+    }
   };
 
   return (
@@ -44,6 +52,7 @@ const Login = ({ open, setOpen }) => {
               />
             </label>
           </div>
+          {error && <div className="error-log">Wrong username and/or password!</div>}
           <Button color="green" type="submit">
             Login
           </Button>

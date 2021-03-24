@@ -13,5 +13,5 @@ export const ITEMS_ROUTE = '/items';
 export const PAYMENTS_ROUTE = '/payments';
 
 export const ITEM_HEADERS = ['Barcode', 'Name', 'Price', 'Inventory', 'IsAgeNeeded'];
-export const USER_HEADERS = ['Name', 'LastName', 'Email'];
+export const USER_HEADERS = ['Full Name', 'City', 'MobilePhone', 'Birthdate'];
 export const PAYMENT_HEADERS = ['Name', 'Description'];

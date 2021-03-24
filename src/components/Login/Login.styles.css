@@ -27,3 +27,8 @@
   border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.error-log {
+  padding: 1rem;
+  color: red;
+}

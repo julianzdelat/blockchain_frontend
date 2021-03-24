@@ -27,16 +27,20 @@ function AuthProvider({ children }) {
     setEmployee(isEmployee);
   }, []);
 
-  const login = useCallback((username) => {
-    if (username === 'admin') {
+  const login = useCallback((username, password) => {
+    let response = false;
+    if ((username && password) === 'admin') {
       setAdmin(true);
       setEmployee(false);
       storage.set(ADMIN_STORAGE_KEY, true);
-    } else {
+      response = true;
+    } else if ((username && password) === 'employee') {
       setAdmin(false);
       setEmployee(true);
       storage.set(EMPLOYEE_STORAGE_KEY, true);
+      response = true;
     }
+    return response;
   }, []);
 
   const logout = useCallback(() => {

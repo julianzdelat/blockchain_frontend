@@ -42,23 +42,95 @@ const UsersModal = ({ user, setOpen, open }) => {
           <Row>
             <Column>
               <FormGroup>
-                <Strong>Email </Strong>
+                <Strong>Address </Strong>
                 <Input
                   required
-                  type="email"
-                  value={data.Email || ''}
-                  onChange={(e) => setData({ ...data, Email: e.target.value })}
+                  type="text"
+                  value={data.Address || ''}
+                  onChange={(e) => setData({ ...data, Address: e.target.value })}
                 />
               </FormGroup>
             </Column>
             <Column>
               <FormGroup>
-                <Strong>Password </Strong>
+                <Strong>City </Strong>
                 <Input
                   required
-                  type="password"
-                  value={data.Password || 0}
-                  onChange={(e) => setData({ ...data, Password: e.target.value })}
+                  type="text"
+                  value={data.City || ''}
+                  onChange={(e) => setData({ ...data, City: e.target.value })}
+                />
+              </FormGroup>
+            </Column>
+          </Row>
+          <Row>
+            <Column>
+              <FormGroup>
+                <Strong>State </Strong>
+                <Input
+                  required
+                  type="text"
+                  value={data.State || ''}
+                  onChange={(e) => setData({ ...data, State: e.target.value })}
+                />
+              </FormGroup>
+            </Column>
+            <Column>
+              <FormGroup>
+                <Strong>Zipcode </Strong>
+                <Input
+                  required
+                  type="text"
+                  value={data.Zipcode || ''}
+                  onChange={(e) => setData({ ...data, Zipcode: e.target.value })}
+                />
+              </FormGroup>
+            </Column>
+          </Row>
+          <Row>
+            <Column>
+              <FormGroup>
+                <Strong>Home Phone </Strong>
+                <Input
+                  required
+                  type="text"
+                  value={data.HomePhone || ''}
+                  onChange={(e) => setData({ ...data, HomePhone: e.target.value })}
+                />
+              </FormGroup>
+            </Column>
+            <Column>
+              <FormGroup>
+                <Strong>Mobile Phone </Strong>
+                <Input
+                  required
+                  type="text"
+                  value={data.MobilePhone || ''}
+                  onChange={(e) => setData({ ...data, MobilePhone: e.target.value })}
+                />
+              </FormGroup>
+            </Column>
+          </Row>
+          <Row>
+            <Column>
+              <FormGroup>
+                <Strong>Birthdate </Strong>
+                <Input
+                  required
+                  type="text"
+                  value={data.Birthdate || ''}
+                  onChange={(e) => setData({ ...data, Birthdate: e.target.value })}
+                />
+              </FormGroup>
+            </Column>
+            <Column>
+              <FormGroup>
+                <Strong>Sex </Strong>
+                <Input
+                  required
+                  type="text"
+                  value={data.Sex || ''}
+                  onChange={(e) => setData({ ...data, Sex: e.target.value })}
                 />
               </FormGroup>
             </Column>
