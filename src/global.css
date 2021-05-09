@@ -16,7 +16,6 @@ html {
 
 body {
   margin: 0;
-  overflow: hidden;
   padding: 0;
   text-rendering: optimizeLegibility;
   background-size: 400% 400%;
@@ -24,6 +23,7 @@ body {
   transition: background-position 2s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e6e6e6;
 }
 
 .separator::before {
